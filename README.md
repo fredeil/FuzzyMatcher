@@ -27,3 +27,28 @@ module main =
         "shtas" |> suggestCommand |> printfn "Did you mean %A?"
         0
 ```
+
+See csharp/Program.cs
+
+```csharp
+using System;
+using System.Collections.Generic;
+using FuzzyMatch;
+
+namespace csharp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var availableCommands = new [] { "stash", "diff", "commit" };
+            
+            Console.WriteLine("Available commands: {0}", string.Join(", ", availableCommands));
+
+            var input = Console.ReadLine();
+            var match = FuzzyMatcher.Match(availableCommands, input);
+            
+            Console.WriteLine($"Did you mean '{match}'?\n");
+        }
+    }
+}
