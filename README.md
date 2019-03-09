@@ -24,6 +24,6 @@ module main =
         // user actually writes "git shtas", the algorithm returns "stash" as the best suggestion for the command
         let suggestCommand = availableCommands |> fuzzyMatch
 
-        "shtas" |> suggestCommand |> printfn "%A"
+        "shtas" |> suggestCommand |> printfn "Did you mean %A?"
         0
 ```
