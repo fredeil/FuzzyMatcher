@@ -61,6 +61,13 @@ module FuzzyMatcher =
        words |> Seq.filter(fun word -> abs (String.length word - String.length input) <= 3)
              |> Seq.map (fun word -> (word, jaroDistance (word, input))) |> Seq.sortByDescending snd
 
-    /// Finds the best match for a given word
+    /// <summary>
+    /// Matches a sequence of words for a given input.
+    /// </summary>
+    /// <param name="words">A list of words</param>
+    /// <param name="input">The words to search for in the list of words</param>
+    /// <returns>
+    /// The word with the highest calculated score for the input.
+    /// </returns>
     [<CompiledNameAttribute("Match")>]
     let fuzzyMatch words input = internalMatch words input |> Seq.head |> fst
