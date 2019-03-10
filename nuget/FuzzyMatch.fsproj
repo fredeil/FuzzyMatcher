@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>FuzzyMatcher</AssemblyName>
+    <IsPackable>true</IsPackable>
+    <PackageId>FuzzyMatcher</PackageId>
+    <Version>0.1.0</Version>
+
+    <Owners>Fredrik Eilertsen</Owners>
+    <Authors>Fredrik Eilertsen</Authors>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Copyright>© Fredrik Eilertsen.</Copyright>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <PackageTags>dotnetcore;fuzzy-match;jaro-distance</PackageTags>
+    <RepositoryUrl>https://github.com/fredeil/FuzzyMatcher/</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/fredeil/FuzzyMatcher/</PackageProjectUrl>
+    <Summary>Fuzzy matcher for finding suggestions to words</Summary>
+    <Description>Fuzzy-matching using Jaro-Winkler distance to calculate similarities between two strings.</Description>
+    <PackageReleaseNotes>See: https://github.com/fredeil/FuzzyMatcher/releases</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../FuzzyMatcher.fs" />
+  </ItemGroup>
+
+</Project>
